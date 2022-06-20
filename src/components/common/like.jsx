@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Like = (props) => {
   const { liked, onLike } = props;
@@ -11,6 +12,11 @@ const Like = (props) => {
       aria-hidden="true"
     ></i>
   );
+};
+
+Like.propTypes = {
+  liked: PropTypes.bool.isRequired,
+  onLike: PropTypes.func.isRequired,
 };
 
 export default Like;
