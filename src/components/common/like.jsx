@@ -14,9 +14,4 @@ const Like = (props) => {
   );
 };
 
-Like.propTypes = {
-  liked: PropTypes.bool.isRequired,
-  onLike: PropTypes.func.isRequired,
-};
-
 export default Like;
