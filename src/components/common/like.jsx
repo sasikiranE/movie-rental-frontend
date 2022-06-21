@@ -1,16 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 const Like = (props) => {
-  const { liked, onLike } = props;
-  const heartClass = liked === true ? "fa fa-heart" : "fa fa-heart-o";
+  let classes = "fa fa-heart";
+  if (!props.liked) classes += "-o";
   return (
     <i
+      onClick={props.onClick}
       style={{ cursor: "pointer" }}
-      onClick={onLike}
-      className={heartClass}
+      className={classes}
       aria-hidden="true"
-    ></i>
+    />
   );
 };
 
